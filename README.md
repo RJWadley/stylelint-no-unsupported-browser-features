@@ -26,8 +26,24 @@ Compatible with stylelint versions 5 and up.
 
 ## options
 
-* browsers (optional): accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
-* ignore (optional): accept an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+* `browsers` (optional): accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
+* `ignore` (optional): accept an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+
+So for example, in a `.stylelintrc`:
+
+```
+{
+  "plugins": [
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [2, {
+      "browsers": ['> 1%', 'Last 2 versions'],
+      "ignore": ['rem']
+    }]
+  }
+}
+```
 
 ## recommendations
 
