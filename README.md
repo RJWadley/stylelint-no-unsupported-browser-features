@@ -1,0 +1,76 @@
+# stylelint-no-unsupported-browser-features
+
+[![build status][build-badge]][build-url]
+[![greenkeeper][greenkeeper-badge]][greenkeeper-url]
+
+> disallow features that are unsupported by the browsers that you are targeting
+
+This plugin checks if the css you're using is supported by the browsers you're targeting.
+It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself
+checks your code against the [caniuse](http://caniuse.com/) database and uses [browserslist](https://github.com/ai/browserslist)
+to get the list of browsers you want to support.
+
+## install
+
+```
+npm i -D stylelint-no-unsupported-browser-features
+```
+
+Compatible with stylelint versions 5 and up.
+
+## usage
+
+1. Add `"stylelint-no-unsupported-browser-features"` to your stylelint config plugins array
+2. Add `"plugin/no-unsupported-browser-features"` to your stylelint config rules
+3. Enable the rule by setting it to `true`, or pass optional extra configuration
+
+## options
+
+* browsers (optional): accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
+* ignore (optional): accept an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+
+## recommendations
+
+This is a good rule to use with "warning"-level severity, because its primary purpose is to warn you
+that you are using features not all browsers fully support and therefore ought to provide fallbacks.
+But the warning will continue even if you have a fallback in place (it doesn't know); so you
+probably do not want this rule to break your build. Instead, consider it a friendly reminder to
+double-check certain spots for fallbacks.
+
+Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a `browserslist`
+file at the root of your project with a list of browsers that you want to support. Since there are
+other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer)
+or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution
+is to just define your intended browser support there (note that there are a lot of different ways
+to define this list, so check out the browserslist documentation for more options).
+
+For the above setup you could use the following config:
+
+`./stylelintrc`
+
+```json
+{
+  "plugins": [
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [2, { "severity": "warning" }]
+  }
+}
+```
+
+`./browserslist`:
+
+```
+> 5%
+Last 2 versions
+```
+
+## license
+
+[MIT](http://ismay.mit-license.org/)
+
+[build-badge]: 
+[build-url]: 
+[greenkeeper-badge]: 
+[greenkeeper-url]: 
