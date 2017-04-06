@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/ismay/stylelint-no-unsupported-browser-features.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "keywords": [
     "stylelint",
     "stylelint-plugin",
