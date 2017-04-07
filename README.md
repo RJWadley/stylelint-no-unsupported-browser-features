@@ -5,6 +5,8 @@
 
 > disallow features that are unsupported by the browsers that you are targeting
 
+![screenshot](https://i.imgur.com/YVrqG6P.png)
+
 This plugin checks if the css you're using is supported by the browsers you're targeting.
 It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself
 checks your code against the [caniuse](http://caniuse.com/) database and uses [browserslist](https://github.com/ai/browserslist)
