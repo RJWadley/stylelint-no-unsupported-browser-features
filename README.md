@@ -64,7 +64,7 @@ to define this list, so check out the browserslist documentation for more option
 
 For the above setup you could use the following config:
 
-`./stylelintrc`
+`./.stylelintrc`
 
 ```json
 {
