@@ -39,7 +39,7 @@ So for example, in a `.stylelintrc`:
     "stylelint-no-unsupported-browser-features"
   ],
   "rules": {
-    "plugin/no-unsupported-browser-features": [2, {
+    "plugin/no-unsupported-browser-features": [true, {
       "browsers": ['> 1%', 'Last 2 versions'],
       "ignore": ['rem']
     }]
@@ -64,7 +64,7 @@ to define this list, so check out the browserslist documentation for more option
 
 For the above setup you could use the following config:
 
-`./stylelintrc`
+`./.stylelintrc`
 
 ```json
 {
@@ -72,7 +72,7 @@ For the above setup you could use the following config:
     "stylelint-no-unsupported-browser-features"
   ],
   "rules": {
-    "plugin/no-unsupported-browser-features": [2, { "severity": "warning" }]
+    "plugin/no-unsupported-browser-features": [true, { "severity": "warning" }]
   }
 }
 ```

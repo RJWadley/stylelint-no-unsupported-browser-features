@@ -11,7 +11,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { browsers: ['IE 8'] }],
+  config: [true, { browsers: ['IE 8'] }],
   skipBasicChecks: true,
 
   accept: [
@@ -39,7 +39,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { browsers: ['IE 6', 'IE 8'] }],
+  config: [true, { browsers: ['IE 6', 'IE 8'] }],
   skipBasicChecks: true,
 
   accept: [
@@ -67,7 +67,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { browsers: ['IE 6', 'IE 8'], ignore: ['css-table'] }],
+  config: [true, { browsers: ['IE 6', 'IE 8'], ignore: ['css-table'] }],
   skipBasicChecks: true,
 
   accept: [
@@ -88,7 +88,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { browsers: ['IE 6', 'IE 8'], ignore: ['css-table', 'rem'] }],
+  config: [true, { browsers: ['IE 6', 'IE 8'], ignore: ['css-table', 'rem'] }],
   skipBasicChecks: true,
 
   accept: [
@@ -101,7 +101,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { browsers: [1] }],
+  config: [true, { browsers: [1] }],
   skipBasicChecks: true,
 
   reject: [
@@ -116,7 +116,7 @@ testRule(noUnsupported.rule, {
 
 testRule(noUnsupported.rule, {
   ruleName: noUnsupported.ruleName,
-  config: [2, { ignore: [1] }],
+  config: [true, { ignore: [1] }],
   skipBasicChecks: true,
 
   reject: [
