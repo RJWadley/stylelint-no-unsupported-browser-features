@@ -28,8 +28,12 @@ var ruleFunction = function (on, options) {
       optional: true
     })
 
-    if (!options.browsers) {
-      options.browsers = browserslist.findConfig(root.source.input.file).defaults.toString()
+
+    if (options && !options.browsers) {
+      var file = root.source.input.file
+      if (typeof file === 'string') {
+        options.browsers = browserslist.findConfig(file).defaults.toString()
+      }
     }
 
     var doiuseOptions = parseOptions(options)
