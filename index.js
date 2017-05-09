@@ -3,6 +3,7 @@ var _ = require('lodash')
 var stylelint = require('stylelint')
 var doiuse = require('doiuse')
 var Result = require('postcss/lib/result')
+var browserslist = require('browserslist')
 var cleanWarningText = require('./lib/cleanWarningText')
 var parseOptions = require('./lib/parseOptions')
 
@@ -26,6 +27,14 @@ var ruleFunction = function (on, options) {
       possible: optionsSchema,
       optional: true
     })
+
+
+    if (options && !options.browsers) {
+      var file = root.source.input.file
+      if (typeof file === 'string') {
+        options.browsers = browserslist.findConfig(file).defaults.toString()
+      }
+    }
 
     var doiuseOptions = parseOptions(options)
     var doiuseResult = new Result()
