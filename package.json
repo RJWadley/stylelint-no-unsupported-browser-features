@@ -1,6 +1,6 @@
 {
   "name": "stylelint-no-unsupported-browser-features",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
   "main": "index.js",
   "scripts": {
