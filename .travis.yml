@@ -1,11 +1,17 @@
 language: node_js
+cache: yarn
+notifications:
+  email: false
 node_js:
   - "4"
   - "5"
   - "6"
-  - "node"
-notifications:
-  email: false
+  - "7"
 script:
   - npm test
-  - npm run lint
+jobs:
+  include:
+    - stage: lint
+      node_js: "7"
+      script:
+        - npm run lint
