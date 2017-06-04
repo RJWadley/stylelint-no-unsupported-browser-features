@@ -24,6 +24,13 @@
     "browser",
     "support"
   ],
+  "greenkeeper": {
+    "ignore": [
+      "eslint-plugin-import",
+      "eslint-plugin-react",
+      "eslint-plugin-jsx-a11y"
+    ]
+  },
   "author": "ismay",
   "license": "MIT",
   "dependencies": {
