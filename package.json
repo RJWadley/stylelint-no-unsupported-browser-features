@@ -2,7 +2,14 @@
   "name": "stylelint-no-unsupported-browser-features",
   "version": "1.0.0",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
+  "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
+  "author": "ismay",
+  "license": "MIT",
   "main": "index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "scripts": {
     "test": "node test",
     "lint": "eslint ."
@@ -14,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
   },
-  "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "keywords": [
     "stylelint",
     "stylelint-plugin",
@@ -32,8 +38,6 @@
       "eslint-plugin-jsx-a11y"
     ]
   },
-  "author": "ismay",
-  "license": "MIT",
   "dependencies": {
     "doiuse": "^3.0.0",
     "lodash": "^4.17.4",
