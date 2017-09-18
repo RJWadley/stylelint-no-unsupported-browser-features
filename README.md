@@ -2,7 +2,7 @@
 
 [![build status][build-badge]][build-url]
 [![greenkeeper status][greenkeeper-badge]][greenkeeper-url]
-[![NSP Status][nsp-badge]][nsp-url]
+[![nsp status][nsp-badge]][nsp-url]
 
 > disallow features that are unsupported by the browsers that you are targeting
 
