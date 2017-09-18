@@ -8,8 +8,9 @@ node_js:
   - "4"
   - "6"
   - "8"
+before_install:
+  - if [[ `npm -v` != 5* ]]; then npm install -g npm@5; fi
 install:
-  - npm i -g npm
   - npm i
 script:
   - npm test
