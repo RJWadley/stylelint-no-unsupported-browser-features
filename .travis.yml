@@ -5,11 +5,16 @@ cache:
 notifications:
   email: false
 node_js:
-  - "4"
-  - "6"
   - "8"
+  - "6"
+  - "4"
 before_install:
   - if [[ `npm -v` != 5* ]]; then npm install -g npm@5; fi
+  - npm install -g greenkeeper-lockfile@1
+before_script:
+  - greenkeeper-lockfile-update
+after_script:
+  - greenkeeper-lockfile-upload
 jobs:
   include:
     - stage: lint
