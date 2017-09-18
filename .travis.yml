@@ -1,13 +1,15 @@
 language: node_js
-cache: yarn
+cache:
+  directories:
+    - node_modules
 notifications:
   email: false
 node_js:
   - "4"
   - "6"
   - "8"
-script:
-  - npm test
+before_install:
+  - if [[ `npm -v` != 5* ]]; then npm install -g npm@5; fi
 jobs:
   include:
     - stage: lint
