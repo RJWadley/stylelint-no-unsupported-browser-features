@@ -2,7 +2,6 @@
 
 [![build status][build-badge]][build-url]
 [![greenkeeper status][greenkeeper-badge]][greenkeeper-url]
-[![nsp status][nsp-badge]][nsp-url]
 
 > disallow features that are unsupported by the browsers that you are targeting
 
@@ -97,5 +96,3 @@ Last 2 versions
 [build-url]: https://travis-ci.org/ismay/stylelint-no-unsupported-browser-features
 [greenkeeper-badge]: https://badges.greenkeeper.io/ismay/stylelint-no-unsupported-browser-features.svg
 [greenkeeper-url]: https://greenkeeper.io/
-[nsp-badge]: https://nodesecurity.io/orgs/ismay/projects/eaee5d16-f528-43bb-b621-1a527fb40036/badge
-[nsp-url]: https://nodesecurity.io/orgs/ismay/projects/eaee5d16-f528-43bb-b621-1a527fb40036
