@@ -5,13 +5,12 @@ cache:
 notifications:
   email: false
 node_js:
-  - "8"
-  - "6"
   - "4"
+  - "6"
+  - "8"
 before_install:
   - if [[ `npm -v` != 5* ]]; then npm install -g npm@5; fi
   - npm install -g greenkeeper-lockfile@1
-  - npm install stylelint
 before_script:
   - greenkeeper-lockfile-update
 after_script:
