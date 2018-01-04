@@ -5,22 +5,25 @@
 [![greenkeeper status][greenkeeper-badge]][greenkeeper-url]
 [![downloads][downloads-badge]][downloads-url]
 
-> disallow features that are unsupported by the browsers that you are targeting
+> disallow features that aren't supported by your targeted browsers
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
 
 This plugin checks if the CSS you're using is supported by the browsers you're targeting.
 It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself
 checks your code against the [caniuse](http://caniuse.com/) database and uses
-[browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support.
+[browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support. 
+Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`,
+`less` and others aren't supported.
 
 ## install
 
 ```shell
-npm i -D stylelint-no-unsupported-browser-features
+npm i -D stylelint-no-unsupported-browser-features stylelint
 ```
 
-Compatible with stylelint versions 5 and up.
+Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin,
+so you'll have to install stylelint as well.
 
 ## usage
 
