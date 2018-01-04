@@ -5,7 +5,7 @@
 [![greenkeeper status][greenkeeper-badge]][greenkeeper-url]
 [![downloads][downloads-badge]][downloads-url]
 
-> disallow features that aren't supported by your targeted browsers
+> disallow features that aren't supported by your target browser audience
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
 
