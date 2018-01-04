@@ -1,3 +1,6 @@
+### 2.0.0
+* move stylelint to peerdependencies
+
 ### 1.0.1
 * bugfix: choked on parsing less with import statements, fixed by upgrading to doiuse 4.0.0
 
