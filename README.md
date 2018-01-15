@@ -16,27 +16,29 @@ checks your code against the [caniuse](http://caniuse.com/) database and uses
 Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`,
 `less` and others aren't supported.
 
-## install
+## Installation
 
-```shell
-npm i -D stylelint-no-unsupported-browser-features stylelint
+```bash
+$ npm install stylelint-no-unsupported-browser-features
 ```
 
 Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin,
-so you'll have to install stylelint as well.
+so you'll have to install stylelint as well:
 
-## usage
+```bash
+$ npm install stylelint
+```
+
+## Usage
 
 1. Add `"stylelint-no-unsupported-browser-features"` to your stylelint config plugins array
 2. Add `"plugin/no-unsupported-browser-features"` to your stylelint config rules
 3. Enable the rule by setting it to `true`, or pass optional extra configuration
 
-## options
+## Options
 
-* `browsers` (optional): accepts an array of browsers you want to support. For example
-  `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
-* `ignore` (optional): accept an array of features to ignore. For example: `['rem', 'css-table']`.
-  Feature names can be found in the error messages.
+* `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
+* `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
 
 So for example, in a `.stylelintrc`:
 
@@ -54,7 +56,7 @@ So for example, in a `.stylelintrc`:
 }
 ```
 
-## recommendations
+## Recommendations
 
 This is a good rule to use with "warning"-level severity, because its primary purpose is to warn you
 that you are using features not all browsers fully support and therefore ought to provide fallbacks.
@@ -62,10 +64,7 @@ But the warning will continue even if you have a fallback in place (it doesn't k
 probably do not want this rule to break your build. Instead, consider it a friendly reminder to
 double-check certain spots for fallbacks.
 
-Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a
-`browserslist` file at the root of your project with a list of browsers that you want to support. Since
-there are other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer)
-or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution
+Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a `browserslist` file at the root of your project with a list of browsers that you want to support. Since there are other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer) or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution
 is to just define your intended browser support there (note that there are a lot of different ways
 to define this list, so check out the browserslist documentation for more options).
 
@@ -93,7 +92,7 @@ For the above setup you could use the following config:
 Last 2 versions
 ```
 
-## license
+## License
 
 [MIT](http://ismay.mit-license.org/)
 
