@@ -12,6 +12,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest",
+    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'"
   },

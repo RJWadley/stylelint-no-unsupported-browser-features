@@ -5,13 +5,16 @@ cache:
 notifications:
   email: false
 node_js:
-  - "4"
   - "6"
   - "8"
 jobs:
   include:
+    - stage: coverage
+      node_js: "8"
+      script:
+        - npm run test:coverage
     - stage: lint
       node_js: "8"
       script:
-        - npm run lint:js
         - npm run lint:prettier
+        - npm run lint:js
