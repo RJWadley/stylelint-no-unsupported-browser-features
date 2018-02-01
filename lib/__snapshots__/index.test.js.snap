@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stylelint-no-unsupported-browser-features ignore option should ignore a single property 1`] = `
+Object {
+  "deprecations": Array [],
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features ignore option should ignore multiple properties 1`] = `
+Object {
+  "deprecations": Array [],
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features multiple browsers should allow display:table for IE 8 and IE 9 1`] = `
+Object {
+  "deprecations": Array [],
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features multiple browsers should disallow display:table for IE 6 and IE 7 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"css-table\\" is not supported by IE 6,7 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features single browser should allow display:table for IE 8 1`] = `
+Object {
+  "deprecations": Array [],
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features single browser should disallow display:table for IE 6 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"css-table\\" is not supported by IE 6 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features single browser should disallow rems for IE 9 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"rem\\" is only partially supported by IE 9 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features validate options should validate the browsers option 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [
+    Object {
+      "text": "Invalid value \\"1\\" for option \\"browsers\\" of rule \\"plugin/no-unsupported-browser-features\\"",
+    },
+  ],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features validate options should validate the ignore option 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [
+    Object {
+      "text": "Invalid value \\"1\\" for option \\"ignore\\" of rule \\"plugin/no-unsupported-browser-features\\"",
+    },
+  ],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;

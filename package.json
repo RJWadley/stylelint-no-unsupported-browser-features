@@ -5,14 +5,16 @@
   "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "author": "ismay",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "lib",
-    "index.js"
+    "lib"
   ],
   "scripts": {
-    "test": "node test",
-    "lint": "eslint ."
+    "precommit": "lint-staged",
+    "test": "jest",
+    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "lint:prettier": "prettier --list-different '**/*.js'",
+    "lint:js": "eslint '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -33,9 +35,7 @@
   "greenkeeper": {
     "ignore": [
       "eslint",
-      "eslint-plugin-import",
-      "eslint-plugin-react",
-      "eslint-plugin-jsx-a11y"
+      "eslint-plugin-import"
     ]
   },
   "dependencies": {
@@ -47,10 +47,16 @@
     "stylelint": ">=5.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.7.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0",
-    "stylelint": "^8.4.0",
-    "stylelint-test-rule-tape": "^0.2.0"
+    "coveralls": "^3.0.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "key-del": "^1.3.0",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
+    "stylelint": "^8.4.0"
   }
 }
