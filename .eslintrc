@@ -1,9 +1,6 @@
 {
-  "extends": ["airbnb-base/legacy", "prettier"],
+  "extends": ["airbnb-base", "prettier"],
   "env": {
     "node": true
-  },
-  "rules": {
-    "func-names": 0
   }
 }
