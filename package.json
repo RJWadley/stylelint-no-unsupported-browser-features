@@ -39,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "doiuse": "^4.0.0",
+    "doiuse": "^4.1.0",
     "lodash": "^4.17.4",
     "postcss": "^6.0.1"
   },
