@@ -1,3 +1,8 @@
+### 3.0.0
+* breaking: dropped node 4 support
+* breaking: updated doiuse to 4.1.0 (underlying browserslist update might break builds)
+* moved to stylelint 9 for testing
+
 ### 2.0.0
 * move stylelint to peerdependencies
 
