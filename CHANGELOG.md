@@ -1,3 +1,7 @@
+### 3.0.1
+
+* update postcss to v7.0.0
+
 ### 3.0.0
 * breaking: dropped node 4 support
 * breaking: updated doiuse to 4.1.0 (underlying browserslist update might break builds)
