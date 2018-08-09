@@ -35,7 +35,8 @@
   "greenkeeper": {
     "ignore": [
       "eslint",
-      "eslint-plugin-import"
+      "eslint-plugin-import",
+      "prettier"
     ]
   },
   "dependencies": {
