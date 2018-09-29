@@ -1,3 +1,7 @@
+### 3.0.2
+
+* update doiuse to v4.2.0
+
 ### 3.0.1
 
 * update postcss to v7.0.0
