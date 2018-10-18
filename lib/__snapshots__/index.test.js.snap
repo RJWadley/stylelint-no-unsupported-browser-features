@@ -18,6 +18,33 @@ Object {
 }
 `;
 
+exports[`stylelint-no-unsupported-browser-features ignorePartialSupport option should not warn for flex when ignoring partially supported features 1`] = `
+Object {
+  "deprecations": Array [],
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features ignorePartialSupport option should warn for flex without ignoring partially supported features 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"flexbox\\" is only partially supported by IE 11 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
 exports[`stylelint-no-unsupported-browser-features multiple browsers should allow display:table for IE 8 and IE 9 1`] = `
 Object {
   "deprecations": Array [],
