@@ -3,6 +3,7 @@
 exports[`stylelint-no-unsupported-browser-features ignore option should ignore a single property 1`] = `
 Object {
   "deprecations": Array [],
+  "errored": false,
   "invalidOptionWarnings": Array [],
   "parseErrors": Array [],
   "warnings": Array [],
@@ -12,6 +13,7 @@ Object {
 exports[`stylelint-no-unsupported-browser-features ignore option should ignore multiple properties 1`] = `
 Object {
   "deprecations": Array [],
+  "errored": false,
   "invalidOptionWarnings": Array [],
   "parseErrors": Array [],
   "warnings": Array [],
@@ -21,6 +23,7 @@ Object {
 exports[`stylelint-no-unsupported-browser-features multiple browsers should allow display:table for IE 8 and IE 9 1`] = `
 Object {
   "deprecations": Array [],
+  "errored": false,
   "invalidOptionWarnings": Array [],
   "parseErrors": Array [],
   "warnings": Array [],
@@ -48,6 +51,7 @@ Object {
 exports[`stylelint-no-unsupported-browser-features single browser should allow display:table for IE 8 1`] = `
 Object {
   "deprecations": Array [],
+  "errored": false,
   "invalidOptionWarnings": Array [],
   "parseErrors": Array [],
   "warnings": Array [],
