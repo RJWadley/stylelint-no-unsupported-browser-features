@@ -1,3 +1,8 @@
+### 4.0.0
+
+* upgrade dependencies
+* BREAKING: dropped support for node 6 and 8
+
 ### 3.0.2
 
 * update doiuse to v4.2.0
