@@ -1,21 +1,8 @@
 language: node_js
-cache:
-  directories:
-    - node_modules
+node_js: lts/*
 notifications:
   email: false
-node_js:
-  - "6"
-  - "8"
-  - "10"
-jobs:
-  include:
-    - stage: coverage
-      node_js: "10"
-      script:
-        - npm run test:coverage
-    - stage: lint
-      node_js: "10"
-      script:
-        - npm run lint:prettier
-        - npm run lint:js
+script:
+  - npm run lint:prettier
+  - npm run lint:js
+  - npm run test:coverage
