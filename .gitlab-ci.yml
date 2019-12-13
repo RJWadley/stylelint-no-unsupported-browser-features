@@ -1,0 +1,20 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+lint:
+  script:
+    - npm install
+    - npm run lint:prettier
+    - npm run lint:js
+  tags:
+    - docker
+
+unit:
+  script:
+    - npm install
+    - npm run test:coverage
+  tags:
+    - docker

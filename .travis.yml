@@ -1,8 +1,0 @@
-language: node_js
-node_js: lts/*
-notifications:
-  email: false
-script:
-  - npm run lint:prettier
-  - npm run lint:js
-  - npm run test:coverage

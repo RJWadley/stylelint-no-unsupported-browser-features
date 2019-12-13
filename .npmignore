@@ -5,7 +5,7 @@
 .gitignore
 .lintstagedrc
 .prettierrc
-.travis.yml
+.gitlab-ci.yml
 
 # Tests
 /test
