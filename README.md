@@ -1,9 +1,5 @@
 # stylelint-no-unsupported-browser-features
 
-[![build status][build-badge]][build-url]
-[![coverage status][coverage-badge]][coverage-url]
-[![greenkeeper][greenkeeper-badge]][greenkeeper-url]
-
 > disallow features that aren't supported by your target browser audience
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
@@ -94,10 +90,3 @@ Last 2 versions
 ## License
 
 [MIT](http://ismay.mit-license.org/)
-
-[build-badge]: https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features.svg?branch=master
-[build-url]: https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features
-[greenkeeper-badge]: https://badges.greenkeeper.io/ismay/stylelint-no-unsupported-browser-features.svg
-[greenkeeper-url]: https://greenkeeper.io/
-[coverage-badge]: https://coveralls.io/repos/github/ismay/stylelint-no-unsupported-browser-features/badge.svg?branch=master
-[coverage-url]: https://coveralls.io/github/ismay/stylelint-no-unsupported-browser-features?branch=master

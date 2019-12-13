@@ -2,7 +2,7 @@
   "name": "stylelint-no-unsupported-browser-features",
   "version": "4.0.0",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
-  "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
+  "homepage": "https://gitlab.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "author": "ismay",
   "license": "MIT",
   "main": "lib/index.js",
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ismay/stylelint-no-unsupported-browser-features.git"
+    "url": "git+https://gitlab.com/ismay/stylelint-no-unsupported-browser-features.git"
   },
   "bugs": {
-    "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
+    "url": "https://gitlab.com/ismay/stylelint-no-unsupported-browser-features/issues"
   },
   "keywords": [
     "stylelint",
@@ -31,21 +31,6 @@
     "browser",
     "support"
   ],
-  "greenkeeper": {
-    "ignore": [
-      "coveralls",
-      "eslint",
-      "eslint-config-airbnb-base",
-      "eslint-config-prettier",
-      "eslint-plugin-import",
-      "husky",
-      "jest",
-      "key-del",
-      "lint-staged",
-      "prettier",
-      "stylelint"
-    ]
-  },
   "dependencies": {
     "doiuse": "^4.2.0",
     "lodash": "^4.17.15",
