@@ -4,17 +4,20 @@ cache:
   paths:
     - node_modules/
 
+before_script:
+  - npm install
+
 lint:
+  stage: test
   script:
-    - npm install
     - npm run lint:prettier
     - npm run lint:js
   tags:
     - docker
 
 unit:
+  stage: test
   script:
-    - npm install
     - npm run test:coverage
   tags:
     - docker
