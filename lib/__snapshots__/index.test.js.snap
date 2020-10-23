@@ -20,6 +20,52 @@ Object {
 }
 `;
 
+exports[`stylelint-no-unsupported-browser-features ignorePartialSupport option should ignore a rule which only triggers partial support warnings 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": false,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features ignorePartialSupport option should not ignore a rule which is fully unsupported 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"rem\\" is not supported by IE 6 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
+exports[`stylelint-no-unsupported-browser-features ignorePartialSupport option should remove the partial support warning for a rule with mixed support 1`] = `
+Object {
+  "deprecations": Array [],
+  "errored": true,
+  "invalidOptionWarnings": Array [],
+  "parseErrors": Array [],
+  "warnings": Array [
+    Object {
+      "column": 7,
+      "line": 1,
+      "rule": "plugin/no-unsupported-browser-features",
+      "severity": "error",
+      "text": "Unexpected browser feature \\"rem\\" is not supported by IE 6,7, Firefox 2, Opera 10.0-10.1 (plugin/no-unsupported-browser-features)",
+    },
+  ],
+}
+`;
+
 exports[`stylelint-no-unsupported-browser-features multiple browsers should allow display:table for IE 8 and IE 9 1`] = `
 Object {
   "deprecations": Array [],
