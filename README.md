@@ -28,6 +28,10 @@ $ npm install stylelint
 
 * `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
 * `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+* `ignorePartialSupport`: optional, off by default. Accepts a boolean. When enabled: 
+  ** Rules that only trigger partial violations will be ignored.
+  ** Rules that trigger both partial and full violations will only report on the full support violations.
+  ** Rules that trigger only full support violations will not be affected.
 
 So for example, in a `.stylelintrc`:
 
@@ -39,7 +43,8 @@ So for example, in a `.stylelintrc`:
   "rules": {
     "plugin/no-unsupported-browser-features": [true, {
       "browsers": ["> 1%", "Last 2 versions"],
-      "ignore": ["rem"]
+      "ignore": ["rem"],
+      "ignorePartialSupport": true
     }]
   }
 }
