@@ -4,12 +4,7 @@
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
 
-This plugin checks if the CSS you're using is supported by the browsers you're targeting.
-It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself
-checks your code against the [caniuse](http://caniuse.com/) database and uses
-[browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support. 
-Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`,
-`less` and others aren't supported.
+This plugin checks if the CSS you're using is supported by the browsers you're targeting. It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself checks your code against the [caniuse](http://caniuse.com/) database and uses [browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support. Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`, `less` and others aren't supported.
 
 ## Installation
 
@@ -17,8 +12,7 @@ Doiuse and this plugin are only compatible with standard css syntax, so syntaxes
 $ npm install stylelint-no-unsupported-browser-features
 ```
 
-Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin,
-so you'll have to install stylelint as well:
+Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin, so you'll have to install stylelint as well:
 
 ```bash
 $ npm install stylelint
@@ -53,15 +47,9 @@ So for example, in a `.stylelintrc`:
 
 ## Recommendations
 
-This is a good rule to use with "warning"-level severity, because its primary purpose is to warn you
-that you are using features not all browsers fully support and therefore ought to provide fallbacks.
-But the warning will continue even if you have a fallback in place (it doesn't know); so you
-probably do not want this rule to break your build. Instead, consider it a friendly reminder to
-double-check certain spots for fallbacks.
+This is a good rule to use with "warning"-level severity, because its primary purpose is to warn you that you are using features not all browsers fully support and therefore ought to provide fallbacks. But the warning will continue even if you have a fallback in place (it doesn't know); so you probably do not want this rule to break your build. Instead, consider it a friendly reminder to double-check certain spots for fallbacks.
 
-Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a `browserslist` file at the root of your project with a list of browsers that you want to support. Since there are other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer) or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution
-is to just define your intended browser support there (note that there are a lot of different ways
-to define this list, so check out the browserslist documentation for more options).
+Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a `browserslist` file at the root of your project with a list of browsers that you want to support. Since there are other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer) or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution is to just define your intended browser support there (note that there are a lot of different ways to define this list, so check out the browserslist documentation for more options).
 
 For the above setup you could use the following config:
 
