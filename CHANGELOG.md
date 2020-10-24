@@ -1,3 +1,10 @@
+### 4.1.0
+
+* feature `ignorePartialSupport` added (default: `false`). When enabled: 
+  ** Rules that only trigger partial violations will be ignored.
+  ** Rules that trigger both partial and full violations will only report on the full support violations.
+  ** Rules that trigger only full support violations will not be affected.
+
 ### 4.0.0
 
 * upgrade dependencies
