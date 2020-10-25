@@ -34,7 +34,7 @@
   "dependencies": {
     "doiuse": "^4.2.0",
     "lodash": "^4.17.15",
-    "postcss": "^7.0.21"
+    "postcss": "^8.1.4"
   },
   "peerDependencies": {
     "stylelint": ">=11.1.1"
