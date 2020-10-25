@@ -10,6 +10,7 @@
     "lib"
   ],
   "scripts": {
+    "codecov": "codecov",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint:prettier": "prettier --list-different '**/*.js'",
