@@ -1,6 +1,13 @@
 language: node_js
-node_js: lts/*
+node_js:
+  - 14
+  - 12
+  - 10
 script:
-  - npm run lint:prettier
-  - npm run lint:js
   - npm run test:coverage
+jobs:
+  include:
+    - stage: lint
+      script:
+        - npm run lint:prettier
+        - npm run lint:js
