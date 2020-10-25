@@ -1,0 +1,6 @@
+language: node_js
+node_js: lts/*
+script:
+  - npm run lint:prettier
+  - npm run lint:js
+  - npm run test:coverage
