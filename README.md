@@ -2,7 +2,8 @@
 
 [![npm version](https://badgen.net/npm/v/stylelint-no-unsupported-browser-features)](https://www.npmjs.com/package/stylelint-no-unsupported-browser-features)
 [![build status](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features.svg?branch=master)](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features)
-[![dependabot status](https://badgen.net/github/dependabot/ismay/stylelint-no-unsupported-browser-features)](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/)
+[![codecov](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features/branch/master/graph/badge.svg?token=oFkzh0LZme)](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features)
+[![dependabot status](https://badgen.net/github/dependabot/ismay/stylelint-no-unsupported-browser-features)](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot)
 
 > disallow features that aren't supported by your target browser audience
 
