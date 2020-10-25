@@ -1,5 +1,7 @@
 # stylelint-no-unsupported-browser-features
 
+[![Build Status](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features.svg?branch=master)](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features)
+
 > disallow features that aren't supported by your target browser audience
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
