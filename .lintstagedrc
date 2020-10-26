@@ -1,6 +1,7 @@
 {
   "**/*.js": [
     "prettier --write",
-    "eslint"
+    "eslint",
+    "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest --bail --findRelatedTests"
   ]
 }
