@@ -11,8 +11,9 @@
   ],
   "scripts": {
     "codecov": "codecov",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest",
+    "test:coverage": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest --coverage",
+    "test:watch": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest --watch",
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'"
   },
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "codecov": "^3.8.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
