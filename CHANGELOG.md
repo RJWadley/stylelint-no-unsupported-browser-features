@@ -1,3 +1,7 @@
+### 4.1.3
+
+* update ignorePartialSupport option validation
+
 ### 4.1.2
 
 * fix ignorePartialSupport type error when secondary options were omitted
