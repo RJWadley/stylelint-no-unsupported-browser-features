@@ -1,3 +1,7 @@
+### 4.1.2
+
+* fix ignorePartialSupport type error when secondary options were omitted
+
 ### 4.1.1
 
 * patch: bump postcss from 7.0.35 to 8.1.4
