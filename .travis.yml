@@ -15,3 +15,7 @@ jobs:
       script:
         - npm run test:coverage
         - npm run codecov
+stages:
+  - lint
+  - test
+  - coverage
