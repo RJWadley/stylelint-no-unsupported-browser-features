@@ -16,7 +16,13 @@ jobs:
       script:
         - npm run test:coverage
         - npm run codecov
+deploy:
+  provider: script
+  script: npx semantic-release
+  on:
+    branch: master
 stages:
   - lint
   - test
   - coverage
+  - deploy
