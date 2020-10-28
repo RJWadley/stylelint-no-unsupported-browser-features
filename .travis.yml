@@ -17,10 +17,11 @@ jobs:
         - npm run test:coverage
         - npm run codecov
     - stage: release
+      install: skip
+      script: skip
       deploy:
         provider: script
-        script:
-          - npx semantic-release
+        script: npx semantic-release
         on:
           branch: master
 stages:
