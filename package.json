@@ -3,15 +3,6 @@
   "version": "4.1.3",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
   "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
-  "author": "ismay",
-  "license": "MIT",
-  "engines": {
-    "node" : ">=10"
-  },
-  "main": "lib/index.js",
-  "files": [
-    "lib/index.js"
-  ],
   "scripts": {
     "codecov": "codecov",
     "test": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest",
@@ -20,29 +11,13 @@
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ismay/stylelint-no-unsupported-browser-features.git"
+  "peerDependencies": {
+    "stylelint": ">=11.1.1"
   },
-  "bugs": {
-    "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
-  },
-  "keywords": [
-    "stylelint",
-    "stylelint-plugin",
-    "css",
-    "doiuse",
-    "linter",
-    "browser",
-    "support"
-  ],
   "dependencies": {
     "doiuse": "^4.2.0",
     "lodash": "^4.17.15",
     "postcss": "^8.1.4"
-  },
-  "peerDependencies": {
-    "stylelint": ">=11.1.1"
   },
   "devDependencies": {
     "codecov": "^3.8.0",
@@ -58,5 +33,30 @@
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "test-all-versions": "^5.0.1"
-  }
+  },
+  "author": "ismay",
+  "license": "MIT",
+  "engines": {
+    "node" : ">=10"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismay/stylelint-no-unsupported-browser-features.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-plugin",
+    "css",
+    "doiuse",
+    "linter",
+    "browser",
+    "support"
+  ]
 }
