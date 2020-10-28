@@ -9,6 +9,7 @@ jobs:
   include:
     - stage: lint
       script:
+        - commitlint-travis
         - npm run lint:prettier
         - npm run lint:js
     - stage: coverage
