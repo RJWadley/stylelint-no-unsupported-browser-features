@@ -37,7 +37,7 @@
   "author": "ismay",
   "license": "MIT",
   "engines": {
-    "node" : ">=10"
+    "node": ">=10"
   },
   "main": "lib/index.js",
   "files": [
