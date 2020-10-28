@@ -20,6 +20,8 @@
     "postcss": "^8.1.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "codecov": "^3.8.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.6.0",
