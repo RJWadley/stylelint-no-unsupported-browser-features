@@ -5,6 +5,9 @@
   "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "author": "ismay",
   "license": "MIT",
+  "engines": {
+    "node" : ">=10"
+  },
   "main": "lib/index.js",
   "files": [
     "lib/index.js"
