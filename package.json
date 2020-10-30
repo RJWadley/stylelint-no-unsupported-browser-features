@@ -15,7 +15,7 @@
     "stylelint": ">=11.1.1"
   },
   "dependencies": {
-    "doiuse": "^4.2.0",
+    "doiuse": "^4.3.1",
     "lodash": "^4.17.15",
     "postcss": "^8.1.4"
   },
