@@ -9,7 +9,7 @@ jobs:
   include:
     - stage: lint
       script:
-        - commitlint-travis
+        - npm run lint:commit-travis
         - npm run lint:prettier
         - npm run lint:js
     - stage: coverage
@@ -21,7 +21,7 @@ jobs:
       script: skip
       deploy:
         provider: script
-        script: npx semantic-release
+        script: npm run semantic-release
         on:
           branch: master
 stages:
