@@ -17,9 +17,9 @@ jobs:
         - npm run test:coverage
         - npm run codecov
     - stage: release
-      install: skip
       script: skip
       deploy:
+        skip_cleanup: true
         provider: script
         script: npm run semantic-release
         on:
