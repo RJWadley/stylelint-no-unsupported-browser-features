@@ -1,3 +1,7 @@
+### 4.1.4
+
+* update doiuse to fix yargs vulnerability warning
+
 ### 4.1.3
 
 * update ignorePartialSupport option validation
