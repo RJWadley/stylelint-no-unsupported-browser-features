@@ -1,7 +1,7 @@
 # stylelint-no-unsupported-browser-features
 
 [![npm version](https://badgen.net/npm/v/stylelint-no-unsupported-browser-features)](https://www.npmjs.com/package/stylelint-no-unsupported-browser-features)
-[![build status](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features.svg?branch=master)](https://travis-ci.com/ismay/stylelint-no-unsupported-browser-features)
+[![ci](https://github.com/ismay/stylelint-no-unsupported-browser-features/workflows/node/badge.svg)](https://github.com/ismay/stylelint-no-unsupported-browser-features/actions)
 [![codecov](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features/branch/master/graph/badge.svg?token=oFkzh0LZme)](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features)
 [![dependabot status](https://badgen.net/github/dependabot/ismay/stylelint-no-unsupported-browser-features)](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
