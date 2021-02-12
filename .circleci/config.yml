@@ -1,7 +1,20 @@
-version: 2.1
+# declare what orbs we are going to use
 orbs:
-  node: circleci/node@3.0.0
+  # the node orb provides common node-related configuration
+  node: circleci/node@2.0.2
+
+# using 2.1 provides access to orbs and other features
+version: 2.1
+
 workflows:
-  node-tests:
+  matrix-tests:
     jobs:
-      - node/test
+      - node/test:
+          version: "14.15"
+          run-command: "test:tav"
+      - node/test:
+          version: "12.20"
+          run-command: "test:tav"
+      - node/test:
+          version: "10.23"
+          run-command: "test:tav"
