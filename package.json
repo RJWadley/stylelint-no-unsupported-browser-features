@@ -6,7 +6,6 @@
   "scripts": {
     "codecov": "codecov",
     "test": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest",
-    "test:tav": "tav",
     "test:coverage": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest --coverage",
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'",
@@ -14,7 +13,7 @@
     "postinstall": "husky install"
   },
   "peerDependencies": {
-    "stylelint": ">=11.1.1"
+    "stylelint": ">=13.0.0"
   },
   "dependencies": {
     "doiuse": "^4.3.1",
@@ -42,8 +41,7 @@
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",
     "semantic-release": "^17.2.2",
-    "stylelint": "^13.7.2",
-    "test-all-versions": "^5.0.1"
+    "stylelint": "^13.7.2"
   },
   "author": "ismay",
   "license": "MIT",

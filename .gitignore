@@ -6,3 +6,6 @@ package-lock.json
 
 # Coveralls coverage
 /coverage
+
+# System files
+.DS_Store
