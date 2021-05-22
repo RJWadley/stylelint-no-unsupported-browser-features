@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.0...v5.0.1) (2021-05-22)
+
+
+### Bug Fixes
+
+* **installation:** remove husky lifecycle script ([cb081ab](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/cb081ab84c3deaacd2713264b23360c269342150))
+
 # [5.0.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v4.1.4...v5.0.0) (2021-05-22)
 
 
