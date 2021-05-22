@@ -10,7 +10,7 @@
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'",
     "semantic-release": "semantic-release",
-    "postinstall": "husky install"
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "stylelint": ">=13.0.0"
