@@ -37,7 +37,7 @@
     "eslint-plugin-import": "^2.18.2",
     "husky": "^6.0.0",
     "jest": "^27.0.3",
-    "jest-preset-stylelint": "^4.1.0",
+    "jest-preset-stylelint": "^4.1.1",
     "lint-staged": "^11.0.0",
     "prettier": "^2.1.2",
     "semantic-release": "^17.2.2",
