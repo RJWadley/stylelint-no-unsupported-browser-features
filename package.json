@@ -67,5 +67,8 @@
     "linter",
     "browser",
     "support"
-  ]
+  ],
+  "renovate": {
+    "extends": ["config:base"]
+  }
 }
