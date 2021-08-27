@@ -40,7 +40,7 @@
     "jest-preset-stylelint": "4.1.1",
     "lint-staged": "11.1.2",
     "prettier": "2.3.2",
-    "semantic-release": "17.4.4",
+    "semantic-release": "17.4.7",
     "stylelint": "13.13.1"
   },
   "author": "ismay",
