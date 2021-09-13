@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.1...v5.0.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **deps:** increment postcss version ([b50dc11](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/b50dc11dac853e73f91c8d5bf26439110c90e0f0))
+
 ## [5.0.1](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.0...v5.0.1) (2021-05-22)
 
 
