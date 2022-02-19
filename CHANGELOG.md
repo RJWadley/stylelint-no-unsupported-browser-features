@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.2...v5.0.3) (2022-02-19)
+
+
+### Bug Fixes
+
+* fix detecting a mix of supported/unsupported rules ([9c63dd0](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/9c63dd04d93ad64acd52b28b66a6cddd5ce22dc0))
+
 ## [5.0.2](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.1...v5.0.2) (2021-09-13)
 
 
