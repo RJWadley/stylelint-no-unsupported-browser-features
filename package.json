@@ -13,40 +13,41 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "stylelint": ">=13.0.0"
+    "postcss": "^7.0.21 || ^8.4.16",
+    "stylelint": "^13.0.0 || ^14.0.0"
   },
   "dependencies": {
     "doiuse": "^4.4.1",
-    "lodash": "^4.17.15",
-    "postcss": "^8.3.6"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.1",
-    "@commitlint/config-conventional": "16.2.1",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.5",
+    "@semantic-release/github": "8.0.6",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "codecov": "3.8.3",
     "cross-env": "7.0.3",
-    "eslint": "8.16.0",
+    "eslint": "8.23.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-prettier": "8.4.0",
-    "eslint-plugin-import": "2.25.3",
-    "husky": "7.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "husky": "8.0.1",
     "jest": "27.5.1",
     "jest-preset-stylelint": "4.2.0",
-    "lint-staged": "12.3.4",
-    "prettier": "2.5.1",
-    "semantic-release": "19.0.3",
-    "stylelint": "14.8.2"
+    "lint-staged": "13.0.3",
+    "postcss": "^8.4.16",
+    "prettier": "2.7.1",
+    "semantic-release": "19.0.5",
+    "stylelint": "^14.11.0"
   },
   "author": "ismay",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "main": "lib/index.js",
   "files": [

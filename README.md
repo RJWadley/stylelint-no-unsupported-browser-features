@@ -13,15 +13,17 @@ This plugin checks if the CSS you're using is supported by the browsers you're t
 
 ## Installation
 
-```bash
-$ npm install stylelint-no-unsupported-browser-features
+```sh
+npm install stylelint-no-unsupported-browser-features
 ```
 
-Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin, so you'll have to install stylelint as well:
+Stylelint and Postcss are [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin, so you'll have to install those packages as your dependencies as well:
 
-```bash
-$ npm install stylelint
+```sh
+npm install stylelint postcss
 ```
+
+> Note that if you are using stylelint v13 you **must** install postcss ^7.0.0, not >=8.
 
 ## Usage
 
