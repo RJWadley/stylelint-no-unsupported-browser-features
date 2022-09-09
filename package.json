@@ -46,7 +46,7 @@
   "author": "ismay",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": "^14 || ^16"
   },
   "main": "lib/index.js",
   "files": [
