@@ -1,5 +1,5 @@
 {
-  "branches": "master",
+  "branches": ["5.x", "master"],
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "conventionalcommits"
