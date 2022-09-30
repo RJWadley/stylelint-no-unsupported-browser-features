@@ -70,7 +70,9 @@
   ],
   "renovate": {
     "extends": [
-      "config:base"
+      "config:js-lib",
+      ":dependencyDashboardApproval",
+      ":enableVulnerabilityAlerts"
     ]
   }
 }
