@@ -1,3 +1,21 @@
+# [6.0.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.4...v6.0.0) (2022-09-30)
+
+
+### chore
+
+* **peerdeps:** drop support for stylelint v13 ([31887ef](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/31887ef81fd76fe71392ed8a498e155cc24c5e45))
+
+
+### Continuous Integration
+
+* **node:** drop node 12 support ([89ba32d](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/89ba32db76ca22ce9720a8cc87bb81966202cadf))
+
+
+### BREAKING CHANGES
+
+* **node:** dropped support for node 12
+* **peerdeps:** dropped support for stylelint v13
+
 ## [5.0.4](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.3...v5.0.4) (2022-09-13)
 
 
