@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.0.0...v6.0.1) (2022-10-01)
+
+
+### Bug Fixes
+
+* **node:** broaden supported node engines range ([f066420](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/f066420426f4e3fca8ef264668a1683e95ee220b))
+
 # [6.0.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v5.0.4...v6.0.0) (2022-09-30)
 
 
