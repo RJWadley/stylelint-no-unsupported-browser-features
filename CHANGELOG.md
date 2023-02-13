@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.0.1...v6.1.0) (2023-02-13)
+
+
+### Features
+
+* **peerdep:** add stylelint 15 support ([6e5a7eb](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/6e5a7eb850f62f82612cb65080183396045be485))
+
 ## [6.0.1](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.0.0...v6.0.1) (2022-10-01)
 
 

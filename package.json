@@ -1,6 +1,6 @@
 {
   "name": "stylelint-no-unsupported-browser-features",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
   "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
   "scripts": {
