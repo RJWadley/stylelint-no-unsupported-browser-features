@@ -16,7 +16,7 @@
     "stylelint": "^14.0.0||^15.0.0"
   },
   "dependencies": {
-    "doiuse": "^4.4.1",
+    "@rjwadley/doiuse": "^6.1.1",
     "lodash": "^4.17.15",
     "postcss": "^8.4.16"
   },
