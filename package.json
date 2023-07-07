@@ -41,7 +41,7 @@
     "lint-staged": "13.2.3",
     "prettier": "2.7.1",
     "semantic-release": "21.0.7",
-    "stylelint": "14.11.0"
+    "stylelint": "15.10.1"
   },
   "author": "ismay",
   "license": "MIT",
