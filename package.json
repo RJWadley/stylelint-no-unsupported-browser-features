@@ -16,7 +16,7 @@
     "stylelint": "^14.0.0||^15.0.0"
   },
   "dependencies": {
-    "doiuse": "^4.4.1",
+    "doiuse": "^6.0.1",
     "lodash": "^4.17.15",
     "postcss": "^8.4.16"
   },
@@ -46,7 +46,7 @@
   "author": "ismay",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "main": "lib/index.js",
   "files": [
