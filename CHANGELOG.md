@@ -1,3 +1,15 @@
+# [7.0.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.1.0...v7.0.0) (2023-07-07)
+
+
+### chore
+
+* **deps:** upgrade to doiuse 6 ([0368c23](https://github.com/ismay/stylelint-no-unsupported-browser-features/commit/0368c238da6d5d5880d6b6c251374b9c8499b2e4))
+
+
+### BREAKING CHANGES
+
+* **deps:** dropped support for node 14 and 15
+
 # [6.1.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.0.1...v6.1.0) (2023-02-13)
 
 
