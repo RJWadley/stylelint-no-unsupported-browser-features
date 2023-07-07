@@ -33,7 +33,7 @@
     "cross-env": "7.0.3",
     "eslint": "8.44.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-prettier": "8.5.0",
+    "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.26.0",
     "husky": "8.0.1",
     "jest": "27.5.1",
