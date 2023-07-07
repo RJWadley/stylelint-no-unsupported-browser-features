@@ -39,7 +39,7 @@
     "jest": "27.5.1",
     "jest-preset-stylelint": "4.2.0",
     "lint-staged": "13.2.3",
-    "prettier": "2.7.1",
+    "prettier": "3.0.0",
     "semantic-release": "21.0.7",
     "stylelint": "15.10.1"
   },
