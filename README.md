@@ -91,4 +91,4 @@ Last 2 versions
 
 ## License
 
-[MIT](http://ismay.mit-license.org/)
+MIT
