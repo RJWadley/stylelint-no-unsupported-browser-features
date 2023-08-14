@@ -2,7 +2,7 @@
   "name": "stylelint-no-unsupported-browser-features",
   "version": "7.0.0",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
-  "homepage": "https://github.com/ismay/stylelint-no-unsupported-browser-features#readme",
+  "homepage": "https://github.com/RJWadley/stylelint-no-unsupported-browser-features#readme",
   "scripts": {
     "codecov": "codecov",
     "test": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest",
@@ -43,7 +43,7 @@
     "semantic-release": "21.0.7",
     "stylelint": "15.10.1"
   },
-  "author": "ismay",
+  "author": "RJWadley",
   "license": "MIT",
   "engines": {
     "node": ">=16"
@@ -54,10 +54,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ismay/stylelint-no-unsupported-browser-features.git"
+    "url": "git+https://github.com/RJWadley/stylelint-no-unsupported-browser-features.git"
   },
   "bugs": {
-    "url": "https://github.com/ismay/stylelint-no-unsupported-browser-features/issues"
+    "url": "https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues"
   },
   "keywords": [
     "stylelint",
