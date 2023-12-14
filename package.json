@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "stylelint": "^14.0.0||^15.0.0"
+    "stylelint": "^16.0.2"
   },
   "dependencies": {
     "doiuse": "^6.0.1",
@@ -41,7 +41,7 @@
     "lint-staged": "13.2.3",
     "prettier": "3.0.0",
     "semantic-release": "21.0.7",
-    "stylelint": "15.10.1"
+    "stylelint": "16.0.2"
   },
   "author": "RJWadley",
   "license": "MIT",
