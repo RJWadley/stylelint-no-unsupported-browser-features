@@ -13,42 +13,44 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "stylelint": "^14.0.0||^15.0.0"
+    "stylelint": "^16.0.2"
   },
   "dependencies": {
-    "doiuse": "^6.0.1",
-    "lodash": "^4.17.15",
-    "postcss": "^8.4.16"
+    "doiuse": "^6.0.2",
+    "lodash.pick": "^4.4.0",
+    "postcss": "^8.4.32"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.6",
-    "@commitlint/config-conventional": "17.6.6",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "10.0.1",
+    "@semantic-release/commit-analyzer": "11.1.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "9.0.3",
-    "@semantic-release/npm": "10.0.4",
-    "@semantic-release/release-notes-generator": "11.0.4",
+    "@semantic-release/github": "9.2.6",
+    "@semantic-release/npm": "11.0.2",
+    "@semantic-release/release-notes-generator": "12.1.0",
     "codecov": "3.8.3",
     "cross-env": "7.0.3",
-    "eslint": "8.44.0",
+    "eslint": "8.56.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-import": "2.27.5",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
     "husky": "8.0.3",
-    "jest": "27.5.1",
-    "jest-preset-stylelint": "4.2.0",
-    "lint-staged": "13.2.3",
-    "prettier": "3.0.0",
-    "semantic-release": "21.0.7",
-    "stylelint": "15.10.1"
+    "jest": "29.7.0",
+    "jest-light-runner": "^0.6.0",
+    "jest-preset-stylelint": "7.0.0",
+    "lint-staged": "15.2.0",
+    "prettier": "3.1.1",
+    "semantic-release": "22.0.12",
+    "stylelint": "16.1.0"
   },
   "author": "RJWadley",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=18.12.0"
   },
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
   "files": [
     "lib/index.js"
   ],
