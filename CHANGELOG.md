@@ -1,3 +1,20 @@
+# [8.0.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v7.0.0...v8.0.0) (2024-01-02)
+
+
+### chore
+
+* bump to next major ([80a9a10](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/80a9a10ae2366b77f7c895855fc3a7f762278e47))
+
+
+### Features
+
+* support stylelint 16 ([#296](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues/296)) ([adcd166](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/adcd166692177df231df6433664c5c9b7d0b335b))
+
+
+### BREAKING CHANGES
+
+* dropped support for node 16 and stylelint 14, 15
+
 # [7.1.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v7.0.0...v7.1.0) (2024-01-02)
 
 
