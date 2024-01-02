@@ -1,3 +1,10 @@
+# [7.1.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v7.0.0...v7.1.0) (2024-01-02)
+
+
+### Features
+
+* support stylelint 16 ([#296](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/issues/296)) ([adcd166](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/adcd166692177df231df6433664c5c9b7d0b335b))
+
 # [7.0.0](https://github.com/ismay/stylelint-no-unsupported-browser-features/compare/v6.1.0...v7.0.0) (2023-07-07)
 
 
