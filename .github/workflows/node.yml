@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pnpm i --ignore-scripts
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
       - run: pnpm run lint:js
       - run: pnpm run lint:prettier
 
@@ -22,7 +25,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: pnpm i --ignore-scripts
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
       - run: pnpm run test
 
   coverage:
@@ -30,7 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pnpm i --ignore-scripts
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
       - run: pnpm run test:coverage
       - uses: codecov/codecov-action@v3
 
@@ -43,7 +52,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - run: pnpm i --ignore-scripts
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
       - run: pnpm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
