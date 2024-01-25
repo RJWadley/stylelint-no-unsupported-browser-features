@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.0...v8.0.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* remove dependency on lodash ([a9d5f68](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/a9d5f68c02142e3cc114183e73737eaf89d4ee49))
+
 # [8.0.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v7.0.0...v8.0.0) (2024-01-02)
 
 
