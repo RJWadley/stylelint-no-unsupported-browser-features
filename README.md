@@ -2,7 +2,7 @@
 
 [![npm version](https://badgen.net/npm/v/stylelint-no-unsupported-browser-features)](https://www.npmjs.com/package/stylelint-no-unsupported-browser-features)
 [![ci](https://github.com/ismay/stylelint-no-unsupported-browser-features/workflows/node/badge.svg)](https://github.com/ismay/stylelint-no-unsupported-browser-features/actions)
-[![codecov](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features/branch/master/graph/badge.svg?token=oFkzh0LZme)](https://codecov.io/gh/ismay/stylelint-no-unsupported-browser-features)
+[![codecov](https://codecov.io/gh/RJWadley/stylelint-no-unsupported-browser-features/graph/badge.svg?token=W1CSZWVUGS)](https://codecov.io/gh/RJWadley/stylelint-no-unsupported-browser-features)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 > disallow features that aren't supported by your target browser audience
@@ -14,13 +14,13 @@ This plugin checks if the CSS you're using is supported by the browsers you're t
 ## Installation
 
 ```bash
-$ npm install stylelint-no-unsupported-browser-features
+npm install stylelint-no-unsupported-browser-features
 ```
 
 Stylelint is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin, so you'll have to install stylelint as well:
 
 ```bash
-$ npm install stylelint
+npm install stylelint
 ```
 
 ## Usage
@@ -31,26 +31,27 @@ $ npm install stylelint
 
 ## Options
 
-* `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
-* `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
-* `ignorePartialSupport`: optional, off by default. Accepts a boolean. When enabled:
-  * Rules that only trigger partial violations will be ignored.
-  * Rules that trigger both partial and full violations will only report on the full support violations.
-  * Rules that trigger only full support violations will not be affected.
+- `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
+- `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+- `ignorePartialSupport`: optional, off by default. Accepts a boolean. When enabled:
+  - Rules that only trigger partial violations will be ignored.
+  - Rules that trigger both partial and full violations will only report on the full support violations.
+  - Rules that trigger only full support violations will not be affected.
 
 So for example, in a `.stylelintrc`:
 
 ```json
 {
-  "plugins": [
-    "stylelint-no-unsupported-browser-features"
-  ],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
-    "plugin/no-unsupported-browser-features": [true, {
-      "browsers": ["> 1%", "Last 2 versions"],
-      "ignore": ["rem"],
-      "ignorePartialSupport": true
-    }]
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": ["> 1%", "Last 2 versions"],
+        "ignore": ["rem"],
+        "ignorePartialSupport": true
+      }
+    ]
   }
 }
 ```
@@ -58,6 +59,13 @@ So for example, in a `.stylelintrc`:
 ## Recommendations
 
 This is a good rule to use with "warning"-level severity, because its primary purpose is to warn you that you are using features not all browsers fully support and therefore ought to provide fallbacks. But the warning will continue even if you have a fallback in place (it doesn't know); so you probably do not want this rule to break your build. Instead, consider it a friendly reminder to double-check certain spots for fallbacks.
+
+If you're confident you've handled all cases, you can also suppress the warning:
+
+```css
+/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+resize: vertical;
+```
 
 Also, doiuse uses browserslist to get the list of browsers you want to support. Browserslist accepts a `browserslist` file at the root of your project with a list of browsers that you want to support. Since there are other projects that can use this file (like [autoprefixer](https://github.com/postcss/autoprefixer) or [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat)) the simplest solution is to define your intended browser support in this file. There are a lot of different ways to define this list. Check out the browserslist [documentation](https://github.com/browserslist/browserslist#config-file) for more options.
 
@@ -67,13 +75,14 @@ For the above setup you could use the following config:
 
 ```json
 {
-  "plugins": [
-    "stylelint-no-unsupported-browser-features"
-  ],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
-    "plugin/no-unsupported-browser-features": [true, {
-      "severity": "warning"
-    }]
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ]
   }
 }
 ```
@@ -87,7 +96,7 @@ Last 2 versions
 
 ## Known issues
 
-* [Visual Studio Code](https://code.visualstudio.com) users leveraging stylelint-no-unsupported-browser-features through the official [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extension will need to restart VSCode after making changes to their browserslist configuration file. It seems that either VSCode or the extension are causing browserlist config files to be cached and are not watching for changes in the file. If you are relying on the `browsers` property within the rules section of `.stylelintrc` you can ignore this issue. Changes to the `browsers` property are discovered immediately.
+- [Visual Studio Code](https://code.visualstudio.com) users leveraging stylelint-no-unsupported-browser-features through the official [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extension will need to restart VSCode after making changes to their browserslist configuration file. It seems that either VSCode or the extension are causing browserlist config files to be cached and are not watching for changes in the file. If you are relying on the `browsers` property within the rules section of `.stylelintrc` you can ignore this issue. Changes to the `browsers` property are discovered immediately.
 
 ## License
 
