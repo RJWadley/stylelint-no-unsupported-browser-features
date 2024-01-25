@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "doiuse": "^6.0.2",
-    "lodash.pick": "^4.4.0",
     "postcss": "^8.4.32"
   },
   "devDependencies": {
