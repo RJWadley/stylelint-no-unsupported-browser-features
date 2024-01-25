@@ -2,7 +2,10 @@
 node_modules
 npm-debug.log
 yarn-error.log
+
+# lockfiles from other package managers
 package-lock.json
+yarn.lock
 
 # Coveralls coverage
 /coverage
