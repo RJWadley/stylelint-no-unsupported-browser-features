@@ -16,7 +16,7 @@
     "stylelint": "^16.0.2"
   },
   "dependencies": {
-    "doiuse": "^6.0.2",
+    "doiuse": "^6.0.5",
     "postcss": "^8.4.32"
   },
   "devDependencies": {
