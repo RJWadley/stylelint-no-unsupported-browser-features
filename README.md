@@ -9,7 +9,7 @@
 
 ![screenshot](https://i.imgur.com/YVrqG6P.png)
 
-This plugin checks if the CSS you're using is supported by the browsers you're targeting. It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself checks your code against the [caniuse](http://caniuse.com/) database and uses [browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support. Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`, `less` and others aren't supported
+This plugin checks if the CSS you're using is supported by the browsers you're targeting. It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. Doiuse itself checks your code against the [caniuse](http://caniuse.com/) database and uses [browserslist](https://github.com/ai/browserslist) to get the list of browsers you want to support. Doiuse and this plugin are only compatible with standard css syntax, so syntaxes like `scss`, `less` and others aren't supported.
 
 ## Installation
 
