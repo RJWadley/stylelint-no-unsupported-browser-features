@@ -1,3 +1,10 @@
+## [8.0.2](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.1...v8.0.2) (2024-11-01)
+
+
+### Bug Fixes
+
+* cannot read properties of undefined ([5e3a9f1](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/5e3a9f192f1fc8a5370d4e23115f0d40ed625278))
+
 ## [8.0.1](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.0...v8.0.1) (2024-01-25)
 
 
