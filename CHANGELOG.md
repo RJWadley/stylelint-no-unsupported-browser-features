@@ -1,3 +1,10 @@
+## [8.0.3](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.2...v8.0.3) (2025-01-27)
+
+
+### Bug Fixes
+
+* providing the line argument in the utils.report() function is deprecated ([ee1175c](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/ee1175cc1139286ea8c63062d8d710186e4f6935))
+
 ## [8.0.2](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.1...v8.0.2) (2024-11-01)
 
 ### Bug Fixes
