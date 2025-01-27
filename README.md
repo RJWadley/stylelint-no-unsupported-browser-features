@@ -31,26 +31,27 @@ $ npm install stylelint
 
 ## Options
 
-* `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
-* `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
-* `ignorePartialSupport`: optional, off by default. Accepts a boolean. When enabled:
-  * Rules that only trigger partial violations will be ignored.
-  * Rules that trigger both partial and full violations will only report on the full support violations.
-  * Rules that trigger only full support violations will not be affected.
+- `browsers`: optional. Accepts an array of browsers you want to support. For example `['> 1%', 'Last 2 versions']`. See [browserslist](https://github.com/ai/browserslist) for documentation.
+- `ignore`: optional. Accepts an array of features to ignore. For example: `['rem', 'css-table']`. Feature names can be found in the error messages.
+- `ignorePartialSupport`: optional, off by default. Accepts a boolean. When enabled:
+  - Rules that only trigger partial violations will be ignored.
+  - Rules that trigger both partial and full violations will only report on the full support violations.
+  - Rules that trigger only full support violations will not be affected.
 
 So for example, in a `.stylelintrc`:
 
 ```json
 {
-  "plugins": [
-    "stylelint-no-unsupported-browser-features"
-  ],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
-    "plugin/no-unsupported-browser-features": [true, {
-      "browsers": ["> 1%", "Last 2 versions"],
-      "ignore": ["rem"],
-      "ignorePartialSupport": true
-    }]
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": ["> 1%", "Last 2 versions"],
+        "ignore": ["rem"],
+        "ignorePartialSupport": true
+      }
+    ]
   }
 }
 ```
@@ -67,13 +68,14 @@ For the above setup you could use the following config:
 
 ```json
 {
-  "plugins": [
-    "stylelint-no-unsupported-browser-features"
-  ],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
-    "plugin/no-unsupported-browser-features": [true, {
-      "severity": "warning"
-    }]
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ]
   }
 }
 ```
@@ -87,7 +89,7 @@ Last 2 versions
 
 ## Known issues
 
-* [Visual Studio Code](https://code.visualstudio.com) users leveraging stylelint-no-unsupported-browser-features through the official [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extension will need to restart VSCode after making changes to their browserslist configuration file. It seems that either VSCode or the extension are causing browserlist config files to be cached and are not watching for changes in the file. If you are relying on the `browsers` property within the rules section of `.stylelintrc` you can ignore this issue. Changes to the `browsers` property are discovered immediately.
+- [Visual Studio Code](https://code.visualstudio.com) users leveraging stylelint-no-unsupported-browser-features through the official [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extension will need to restart VSCode after making changes to their browserslist configuration file. It seems that either VSCode or the extension are causing browserlist config files to be cached and are not watching for changes in the file. If you are relying on the `browsers` property within the rules section of `.stylelintrc` you can ignore this issue. Changes to the `browsers` property are discovered immediately.
 
 ## License
 
