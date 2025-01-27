@@ -6,10 +6,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm i --ignore-scripts
-    - run: npm run lint:js
-    - run: npm run lint:prettier
+      - uses: actions/checkout@v4
+      - run: npm i --ignore-scripts
+      - run: npm run lint:js
+      - run: npm run lint:prettier
 
   test:
     needs: [lint]
@@ -18,33 +18,33 @@ jobs:
       matrix:
         node-version: [18.x, 20.x]
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm i --ignore-scripts
-    - run: npm run test
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm i --ignore-scripts
+      - run: npm run test
 
   coverage:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: npm i --ignore-scripts
-    - run: npm run test:coverage
-    - uses: codecov/codecov-action@v3
+      - uses: actions/checkout@v4
+      - run: npm i --ignore-scripts
+      - run: npm run test:coverage
+      - uses: codecov/codecov-action@v3
 
   release:
     needs: [test]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        persist-credentials: false
-    - run: npm i --ignore-scripts
-    - run: npm run semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - run: npm i --ignore-scripts
+      - run: npm run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
