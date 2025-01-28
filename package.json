@@ -1,6 +1,6 @@
 {
   "name": "stylelint-no-unsupported-browser-features",
-  "version": "8.0.3",
+  "version": "8.0.4",
   "description": "Disallow features that are unsupported by the browsers that you are targeting",
   "homepage": "https://github.com/RJWadley/stylelint-no-unsupported-browser-features#readme",
   "scripts": {

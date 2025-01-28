@@ -1,3 +1,10 @@
+## [8.0.4](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.3...v8.0.4) (2025-01-28)
+
+
+### Bug Fixes
+
+* report on whole node, rather than a specific index ([a1920b2](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/a1920b2292f8ea97a407b711887941c38b38e12f))
+
 ## [8.0.3](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.2...v8.0.3) (2025-01-27)
 
 
