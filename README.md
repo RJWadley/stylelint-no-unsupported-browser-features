@@ -87,6 +87,55 @@ For the above setup you could use the following config:
 Last 2 versions
 ```
 
+## New in v8.0.4-modified.0: `ignoreWithinAtSupports` Option
+
+- `ignoreWithinAtSupports`: optional, off by default. Accepts a boolean. When enabled:
+  - Skips browser compatibility warnings for features wrapped in valid `@supports` rules
+  - Respects nested conditions and logical operators (`and`/`or`/`not`)
+  - Still validates features outside `@supports` or in non-matching conditions
+
+### Usage Examples
+
+```json
+{
+  "plugins": ["stylelint-no-unsupported-browser-features"],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": ["IE 11"],
+        "ignoreWithinAtSupports": true
+      }
+    ]
+  }
+}
+```
+
+### Behavior Examples
+
+✅ **Allowed**:
+```css
+@supports (display: grid) {
+  .container { display: grid; } /* No warning */
+}
+```
+
+❌ **Still Reported**:
+```css
+/* Without @supports */
+.container { display: grid; } /* Warning */
+
+/* Non-matching condition */
+@supports (display: flex) {
+  .container { display: grid; } /* Warning */
+}
+
+/* Uncertain conditions (OR) */
+@supports (display: grid) or (display: flex) {
+  .container { display: grid; } /* Warning */
+}
+```
+
 ## Known issues
 
 - [Visual Studio Code](https://code.visualstudio.com) users leveraging stylelint-no-unsupported-browser-features through the official [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) extension will need to restart VSCode after making changes to their browserslist configuration file. It seems that either VSCode or the extension are causing browserlist config files to be cached and are not watching for changes in the file. If you are relying on the `browsers` property within the rules section of `.stylelintrc` you can ignore this issue. Changes to the `browsers` property are discovered immediately.
