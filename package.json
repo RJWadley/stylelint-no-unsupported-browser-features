@@ -18,8 +18,7 @@
     "stylelint": "^16.0.2"
   },
   "dependencies": {
-    "doiuse": "^6.0.5",
-    "vitest": "^3.2.2"
+    "doiuse": "^6.0.5"
   },
   "devDependencies": {
     "@ai-sdk/google": "^2.0.0-alpha.4",
@@ -44,11 +43,13 @@
     "globals": "^16.2.0",
     "husky": "9.1.7",
     "lint-staged": "16.1.0",
+    "log-update": "^6.1.0",
     "postcss": "^8.5.4",
     "prettier": "3.5.3",
     "semantic-release": "24.2.5",
     "stylelint": "16.20.0",
     "turndown": "^7.2.0",
+    "vitest": "^3.2.2",
     "zod": "^3.25.53"
   },
   "overrides": {

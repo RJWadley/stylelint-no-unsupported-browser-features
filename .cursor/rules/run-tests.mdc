@@ -3,4 +3,4 @@ description:
 globs: 
 alwaysApply: true
 ---
-Tests can be run with `bun run test`, which will use vitest's test runner. You can also run vitest directly using `bunx vitest run`.
+Tests can be run directly using `bunx vitest run`.

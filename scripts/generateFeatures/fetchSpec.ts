@@ -15,7 +15,6 @@ const queue = asyncQueue(
     if (!baseSpecURL) return resolve(undefined);
     if (cache[baseSpecURL]) return resolve(cache[baseSpecURL]);
 
-    console.log('fetching', baseSpecURL);
     const response = await fetch(baseSpecURL);
     const text = await response.text();
     cache[baseSpecURL] = text;

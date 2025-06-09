@@ -92,26 +92,88 @@ export const check = (root: PostCSS.Root, detailedApproval: ApprovalFunction) =>
   };
 
   root.walkRules((rule) => {
-    // Determine context once per rule for efficiency.
-    let display = '';
-    rule.walkDecls(/^display$/i, (d) => {
-      display = d.value.toLowerCase();
-    });
-
-    const isFlex = display === 'flex' || display === 'inline-flex';
-    const isGrid = display === 'grid' || display === 'inline-grid';
-    const isBlock = display === 'block' || display === 'inline-block';
-
     for (const node of rule.nodes) {
       if (node.type === 'decl') {
         const decl = node;
-        const prop = decl.prop.toLowerCase();
-        const value = decl.value.toLowerCase().trim();
 
-        if (prop === 'anchor-scope') {
+        if (!decl.parent) {
+          continue;
+        }
+
+        // Determine context for *this* declaration
+        let display = '';
+        // 1. Check the declaration's own rule
+        decl.parent.walkDecls(/^display$/i, (d) => {
+          display = d.value.trim().toLowerCase();
+        });
+
+        // 2. Check the parent rule, if one exists (for nesting before plugins)
+        if (!display && decl.parent.parent && decl.parent.parent.type === 'rule') {
+          const nestedRule = decl.parent as PostCSS.Rule;
+          // Only inherit context for pseudo-classes, not for pseudo-elements or child selectors.
+          if (nestedRule.selector.startsWith('&:') && !nestedRule.selector.startsWith('&::')) {
+            (decl.parent.parent as PostCSS.Rule).walkDecls(/^display$/i, (d) => {
+              display = d.value.trim().toLowerCase();
+            });
+          }
+        }
+
+        const flexDisplayValues = [
+          'flex',
+          'inline-flex',
+          '-webkit-flex',
+          '-moz-box',
+          '-ms-flexbox',
+          '-webkit-box',
+        ];
+        const isFlex = flexDisplayValues.includes(display);
+        const isGrid = display === 'grid' || display === 'inline-grid';
+        const isBlock = display === 'block' || display === 'inline-block';
+
+        const prop = decl.prop.toLowerCase();
+        const { unprefixed: unprefixedProp } = getPrefixed(prop);
+        const value = decl.value.trim().toLowerCase();
+        const baselineValues = ['baseline', 'first baseline', 'last baseline'];
+
+        if (unprefixedProp === 'align-content') {
+          if (isFlex) {
+            if (baselineValues.includes(value)) {
+              approve(decl, 'properties.align-content.flex_context.baseline');
+            }
+            if (value === 'last baseline') {
+              approve(decl, 'properties.align-content.flex_context.last_baseline');
+            }
+            if (value === 'baseline' || value === 'first baseline') {
+              approve(decl, 'properties.align-content.flex_context.first_baseline');
+            }
+            if (['start', 'end'].includes(value)) {
+              approve(decl, 'properties.align-content.flex_context.start_end');
+            }
+            if (value === 'space-evenly') {
+              approve(decl, 'properties.align-content.flex_context.space-evenly');
+            }
+          }
+          if (isBlock) {
+            approve(decl, 'properties.align-content.block_context');
+          }
+          if (isGrid) {
+            if (baselineValues.includes(value)) {
+              approve(decl, 'properties.align-content.grid_context.baseline');
+            }
+          }
+        }
+
+        if (unprefixedProp === 'anchor-scope') {
           approve(decl, 'properties.anchor-scope');
           if (value === 'all') {
             approve(decl, 'properties.anchor-scope.all');
+          }
+        }
+
+        if (unprefixedProp === 'accent-color') {
+          approve(decl, 'properties.accent-color');
+          if (value === 'auto') {
+            approve(decl, 'properties.accent-color.auto');
           }
         }
       }

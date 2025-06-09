@@ -5,8 +5,45 @@ import { $, sleep } from 'bun';
 import { z } from 'zod';
 import { dedent, wrapToWidth } from './dedent';
 import TurndownService from 'turndown';
+import logUpdate from 'log-update';
 
 const STOP_FOR_TESTS = true;
+
+const inProgressLogs = new Map<string, string>();
+const finishedLogs: string[] = [];
+let totalCost = 0;
+
+function updateScreen() {
+  const progressLines = Array.from(inProgressLogs.entries()).map(
+    ([id, status]) => `[IN PROGRESS] ${id}: ${status.replaceAll('\n', ' ')}`,
+  );
+
+  const totalCostLine = `\nTotal cost: $${totalCost.toFixed(3)}`;
+
+  logUpdate([...finishedLogs, ...progressLines, totalCostLine].join('\n'));
+}
+
+function logProgress(id: string, message: string) {
+  inProgressLogs.set(id, message);
+  updateScreen();
+}
+
+function logFinished(id: string, cost: number) {
+  const status = inProgressLogs.get(id) || 'Unknown status';
+  finishedLogs.push(`[SUCCESS] ${id}: ${status.replaceAll('\n', ' ')} ($${cost.toFixed(3)})`);
+  inProgressLogs.delete(id);
+  totalCost += cost;
+  updateScreen();
+}
+
+function logFailed(id: string, error: Error) {
+  const status = inProgressLogs.get(id) || 'Unknown status';
+  finishedLogs.push(
+    `[FAILED] ${id}: ${status.replaceAll('\n', ' ')}. Error: ${error.message.replaceAll('\n', ' ')}`,
+  );
+  inProgressLogs.delete(id);
+  updateScreen();
+}
 
 var turndownService = new TurndownService();
 
@@ -328,7 +365,7 @@ const generateTest = async ({
         parameters: testSchema,
         execute: async ({ tests, happyWithTests }: z.infer<typeof testSchema>) => {
           if (!happyWithTests) {
-            console.log('model was not happy with tests for ' + id);
+            logProgress(id, 'model was not happy with tests, retrying...');
             return;
           }
 
@@ -381,7 +418,9 @@ const generateTest = async ({
   } catch {}
 
   if (STOP_FOR_TESTS) {
-    await $`bun run test`;
+    await $`bun run test`.catch(() => {
+      process.exit(1);
+    });
   }
 
   const inputPricePerToken = modelInfo.inputPerMillionTokens / 1_000_000;
@@ -393,25 +432,24 @@ const generateTest = async ({
   const cost = outputTokens * outputPricePerToken + inputTokens * inputPricePerToken;
   priceTotal += cost;
 
-  console.log(
-    'generated',
-    id,
-    'which cost $' + cost.toFixed(3),
-    'total cost so far $' + priceTotal.toFixed(3),
-  );
+  logProgress(id, `generated, which cost $${cost.toFixed(3)}`);
+
+  return cost;
 };
 
 const generateTestWithFallback = async (
   ...args: Parameters<typeof generateTest>
-): ReturnType<typeof generateTest> => {
+): Promise<number> => {
+  const id = args[0].id;
   return generateTest(...args).catch(async (e) => {
     if (e instanceof Error) {
       if ('statusCode' in e && e.statusCode === 429) {
+        logProgress(id, `Rate limited, waiting 10s... (${new Date().toLocaleTimeString()})`);
         await sleep(10_000);
         return generateTestWithFallback(...args);
       }
       if (e.name === 'AI_APICallError') {
-        console.warn('generation failed: ' + e.message);
+        logProgress(id, `Generation failed: ${e.message}, retrying...`);
         return generateTestWithFallback(...args);
       }
     }
@@ -426,8 +464,19 @@ const initiateGeneration = async (...args: Parameters<typeof generateTest>) => {
   const file = Bun.file(args[0].filePath);
   if (await file.exists()) return;
 
-  console.log('starting test generation for', args[0].id);
-  return generateTestWithFallback(...args);
+  const id = args[0].id;
+
+  logProgress(id, 'starting test generation...');
+  try {
+    const cost = await generateTestWithFallback(...args);
+    logFinished(id, cost);
+  } catch (e) {
+    if (e instanceof Error) {
+      logFailed(id, e);
+    } else {
+      logFailed(id, new Error(String(e)));
+    }
+  }
 };
 
 export const queueTestGeneration = asyncQueue(initiateGeneration, {
