@@ -4,3 +4,5 @@ globs:
 alwaysApply: true
 ---
 Tests can be run directly using `bunx vitest run`.
+
+It's not required, but I also recommend using the bail option to limit how many tests can fail: `bunx vitest --bail 50 run`

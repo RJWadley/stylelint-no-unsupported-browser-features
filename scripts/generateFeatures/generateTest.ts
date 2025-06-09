@@ -7,7 +7,7 @@ import { dedent, wrapToWidth } from './dedent';
 import TurndownService from 'turndown';
 import logUpdate from 'log-update';
 
-const STOP_FOR_TESTS = true;
+const STOP_FOR_TESTS = false;
 
 const inProgressLogs = new Map<string, string>();
 const finishedLogs: string[] = [];
