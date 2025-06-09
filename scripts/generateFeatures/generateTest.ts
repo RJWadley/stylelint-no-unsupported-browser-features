@@ -419,7 +419,8 @@ const generateTest = async ({
 
   if (STOP_FOR_TESTS) {
     await $`bun run test`.catch(() => {
-      process.exit(1);
+      console.log('generated a new failing test! the checker will need to be updated.');
+      process.exit(0);
     });
   }
 
