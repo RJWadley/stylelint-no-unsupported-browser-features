@@ -5,43 +5,54 @@
   "homepage": "https://github.com/RJWadley/stylelint-no-unsupported-browser-features#readme",
   "scripts": {
     "codecov": "codecov",
-    "test": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest",
+    "test": "vitest run",
     "test:coverage": "cross-env BROWSERSLIST_DISABLE_CACHE=true BROWSERSLIST='IE 8' jest --coverage",
     "lint:prettier": "prettier --list-different '**/*.js'",
     "lint:js": "eslint '**/*.js'",
     "semantic-release": "semantic-release",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate": "bun scripts/generateFeatures/index.ts"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "bun@1.2.15",
   "peerDependencies": {
     "stylelint": "^16.0.2"
   },
   "dependencies": {
     "doiuse": "^6.0.5",
-    "postcss": "^8.4.32"
+    "vitest": "^3.2.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
-    "@eslint/js": "^9.19.0",
+    "@ai-sdk/google": "^2.0.0-alpha.4",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@eslint/js": "^9.28.0",
+    "@mdn/content": "https://github.com/mdn/content.git",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "11.0.1",
+    "@semantic-release/github": "11.0.3",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.3",
+    "@tanstack/pacer": "^0.8.0",
+    "@types/bun": "^1.2.15",
+    "@types/turndown": "^5.0.5",
+    "ai": "^5.0.0-alpha.5",
+    "bun-types": "^1.2.15",
     "codecov": "3.8.3",
     "cross-env": "7.0.3",
-    "eslint": "^9.19.0",
-    "globals": "^15.14.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
     "husky": "9.1.7",
-    "jest": "29.7.0",
-    "jest-light-runner": "^0.6.0",
-    "jest-preset-stylelint": "7.2.0",
-    "lint-staged": "15.4.3",
-    "prettier": "3.4.2",
-    "semantic-release": "24.2.1",
-    "stylelint": "16.14.1"
+    "lint-staged": "16.1.0",
+    "postcss": "^8.5.4",
+    "prettier": "3.5.3",
+    "semantic-release": "24.2.5",
+    "stylelint": "16.20.0",
+    "turndown": "^7.2.0",
+    "zod": "^3.25.53"
+  },
+  "overrides": {
+    "postcss": "^8.5.4"
   },
   "author": "RJWadley",
   "license": "MIT",

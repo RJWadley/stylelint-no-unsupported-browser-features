@@ -1,0 +1,78 @@
+---
+description: Details and examples about how properties that affect different display contexts (such as grid, flex, and block contexts) should be handled.
+globs: 
+alwaysApply: false
+---
+
+### **CSS Context and Feature Detection**
+
+#### **Primary Rule: The "Conservative (Same-Rule Only)" Approach**
+
+When analyzing CSS, a property's behavior is considered within a specific layout context (like `flex`, `grid`, or `block`) **ONLY IF** the `display` property establishing that context is explicitly declared within the **SAME CSS RULE**. Implicit contexts (e.g., `div` being block by default) or contexts set on parent rules are **NOT** considered.
+
+#### **Exception: Handling Item-Specific Properties (e.g., `place-self`)**
+
+This "same-rule" model makes it impossible to determine a context for properties that apply to flex/grid *items* rather than the container. The `display` property is on the parent, but the item-specific property is on the child.
+
+Therefore, for these specific properties, **we abandon context detection entirely**. You should generate tests that report the usage of these properties whenever they appear, regardless of context.
+
+**Example for the Exception:**
+
+*   **`place-self` (Item Property):** This property affects a grid or flex item. We can never know its context. Therefore, it should be reported whenever it is used.
+
+    ```css
+    .grid-container {
+      display: grid;
+    }
+    .grid-item {
+      place-self: center start; /* <<< DETECTED (Reported without context check) */
+    }
+
+    .some-other-element {
+      place-self: end;          /* <<< ALSO DETECTED (Reported without context check) */
+    }
+    ```
+
+---
+
+### **Examples Illustrating the Primary Rule**
+
+**1. Flex Context Detection:**
+
+*   **Detected:** `align-content` is detected as a flex property because `display: flex` is in the same rule.
+
+    ```css
+    .flex-container {
+      display: flex;
+      align-content: center; /* <<< DETECTED */
+    }
+    ```
+
+*   **NOT Detected:** `align-content` is *NOT* detected as a flex property because `display: flex` is in a different rule.
+
+    ```css
+    .parent { display: flex; }
+    .child {
+      align-content: center; /* <<< NOT DETECTED */
+    }
+    ```
+
+**2. Block Context Detection:**
+
+*   **Detected:** `align-content` is detected as a block property because `display: block` is in the same rule.
+
+    ```css
+    .block-element {
+      display: block;
+      align-content: start; /* <<< DETECTED */
+    }
+    ```
+
+*   **NOT Detected:** `align-content` is *NOT* detected, even on a `div`, because `display: block` is not explicitly written in the rule.
+
+    ```css
+    div {
+      align-content: start; /* <<< NOT DETECTED */
+    }
+    ```
+    

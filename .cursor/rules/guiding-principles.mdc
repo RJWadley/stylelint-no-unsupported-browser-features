@@ -1,0 +1,55 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Excellent question. As we worked through the test failures, we established several key rules and heuristics beyond just the display context. These are crucial for building a robust and predictable checker.
+
+Here is a comprehensive summary of all the rules we've developed:
+
+1. The Display Context Rule: "Conservative, Same-Rule Only"
+
+This is the most important rule we established for container properties.
+
+Primary Rule: A property is only considered to be in a flex, grid, or block context if the corresponding display property (display: flex, display: block, etc.) is explicitly declared in the exact same CSS rule.
+
+Exception for Item-Specific Properties: For properties that apply to flex/grid items (like place-self or align-self), we abandon context detection entirely. We report them whenever they are used, as their context is set on a parent rule which we cannot reliably determine.
+
+2. The @supports Heuristic: "Exact Match Only"
+
+Because we can't build a full browser engine to evaluate complex @supports queries, we settled on a simple, predictable heuristic.
+
+Rule: We only consider a feature to be "guarded" (and thus suppress a warning) if the @supports query checks for the exact property and value being used.
+
+Example: align-content: stretch is only considered guarded by @supports (align-content: stretch). We would ignore a more general query like @supports (display: flex). This avoids the complexity of parsing logical operators (and, or, not) and trying to infer contextual relationships.
+
+3. The Value Normalization Rule: "Always Clean the Input"
+
+To handle variations in developer formatting, we apply two key normalization steps.
+
+Handle Comments with .trim(): PostCSS often includes trailing whitespace in a decl.value if a comment follows it (e.g., value: 'start /* comment */'). We must always call .trim() on the value before checking it.
+Handle Whitespace with .replace(/\s+/g, ' '): For multi-word values (like first baseline), we first normalize all internal whitespace to a single space. This makes checks like value.includes('first baseline') reliable, regardless of whether the developer wrote one space or several.
+
+4. The Special Values Rule: "Handle Keywords and Variables Conservatively"
+
+CSS has special values that require specific handling because we can't know their resolved value during static analysis.
+
+CSS-Wide Keywords (initial, unset, revert): We handle these on a per-property basis. For some properties (anchor-scope), these keywords effectively mean none. For others, we may need to check if they should trigger a general feature detection.
+
+CSS Variables (var(...)): This is the hardest case. Our current stance is that it's impossible to know what a variable resolves to. The most conservative approach is to assume it could be an unsupported value and trigger the general feature detection for that property (e.g., if we see align-content: var(--my-align), we would report a usage of align-content).
+
+5. The Architectural Rule: "Centralize Logic in approve()"
+
+To keep the checker maintainable and make adding new features easy, all feature detections are funneled through a single approve(decl, featureId) function.
+
+Purpose: This central function is responsible for handling all the common, repetitive logic:
+
+Determining the vendor prefix.
+
+Checking for @supports guards.
+
+Checking for the presence of fallback properties.
+
+Benefit: This keeps the main checking logic clean and focused only on identifying property: value pairs, without cluttering it with repeated checks for prefixes or @supports conditions.
+
+These five rules form the complete logical foundation of our checker. They provide a clear and consistent framework for how we handle the ambiguities and complexities of static CSS analysis.

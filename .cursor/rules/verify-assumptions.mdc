@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When working with the AST, always add comments to verify your assumptions before making changes. Even though I'm very familiar with the AST, I am sometimes surprised by the structure.
