@@ -17,6 +17,7 @@
     "stylelint": "^16.0.2"
   },
   "dependencies": {
+    "browserslist": "^4.26.3",
     "doiuse": "^6.0.5",
     "postcss": "^8.4.32"
   },
