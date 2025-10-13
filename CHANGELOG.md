@@ -1,3 +1,10 @@
+## [8.0.5](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.4...v8.0.5) (2025-10-13)
+
+
+### Bug Fixes
+
+* resolve browsers option by default to improve performance ([6010f82](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/6010f82e503621267dd76da2f0bde989ce549a2c))
+
 ## [8.0.4](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.3...v8.0.4) (2025-01-28)
 
 
