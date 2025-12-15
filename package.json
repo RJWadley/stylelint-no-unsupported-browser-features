@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "browserslist": "^4.26.3",
-    "doiuse": "^6.0.5",
+    "doiuse": "^6.0.6",
     "postcss": "^8.4.32"
   },
   "devDependencies": {
