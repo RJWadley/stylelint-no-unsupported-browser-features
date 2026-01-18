@@ -14,7 +14,7 @@
   },
   "packageManager": "pnpm@9.15.4",
   "peerDependencies": {
-    "stylelint": "^16.0.2"
+    "stylelint": ">=16.0.2"
   },
   "dependencies": {
     "browserslist": "^4.26.3",
