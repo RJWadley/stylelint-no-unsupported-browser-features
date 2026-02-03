@@ -1,3 +1,10 @@
+## [8.1.1](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.1.0...v8.1.1) (2026-02-03)
+
+
+### Bug Fixes
+
+* publish to npm ([ad88d46](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/ad88d464e1acb0c1c77ebb6ede931dde48fde5ea))
+
 # [8.1.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.5...v8.1.0) (2026-02-03)
 
 
