@@ -1,3 +1,10 @@
+# [8.1.0](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.5...v8.1.0) (2026-02-03)
+
+
+### Features
+
+* add support for Stylelint 17 ([f6d4b22](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/commit/f6d4b226f640e6680bd4c615ba11f2f089e10fd7))
+
 ## [8.0.5](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.0.4...v8.0.5) (2025-10-13)
 
 
