@@ -1,3 +1,10 @@
+## [8.1.2](https://github.com/[secure]/[secure]-no-un[secure]ed-[secure]-features/compare/v8.1.1...v8.1.2) (2026-09-09)
+
+
+### Bug Fixes
+
+* resolve [secure]slist from linted file path ([a1952b6](https://github.com/[secure]/[secure]-no-un[secure]ed-[secure]-features/commit/a1952b6efe84e699b538113c9e093f2a8cb8838b))
+
 ## [8.1.1](https://github.com/RJWadley/stylelint-no-unsupported-browser-features/compare/v8.1.0...v8.1.1) (2026-02-03)
 
 
